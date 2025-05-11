@@ -8,6 +8,7 @@ import InventoryUpdateForm from './Inventory/updateInventory';
 import InventoryView from './Inventory/viewInventory';
 import ConsumptionTable from './Consumption/viewConsumption';
 import AddConsumption from './Consumption/addConsumption';
+import Navbar from './Navbar';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <div className="min-h-screen bg-gray-100">
         <Routes>
           <Route path="/" element={<ShoppingListView />} />
+          <Route path="/Navbar" element={<Navbar />} />
           <Route path="/add" element={<AddList />} />
           <Route path="/update/:id" element={<UpdateItem />} />
           <Route path="/addinventory" element={<AddInventory/>}></Route>
