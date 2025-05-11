@@ -117,8 +117,9 @@ const InventoryAddForm = ({ onAddSuccess }) => {
     );
 };
 
-export default InventoryAddForm;\
+export default InventoryAddForm;
 */
+
 import React, { useState } from 'react';
 import axios from 'axios';
 
@@ -242,3 +243,4 @@ const InventoryAddForm = ({ onAddSuccess }) => {
 };
 
 export default InventoryAddForm;
+
