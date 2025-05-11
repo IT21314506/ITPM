@@ -156,17 +156,17 @@ const InventoryAddForm = ({ onAddSuccess }) => {
     };
 
     return (
-        <div className="min-h-screen bg-gradient-to-br from-blue-50 to-white flex items-center justify-center p-4">
-            <div className="max-w-md w-full bg-white rounded-2xl shadow-xl p-8 transform transition-all hover:shadow-2xl">
-                <h2 className="text-3xl font-bold text-blue-600 mb-6 text-center">Add New Inventory Item</h2>
-                {error && (
-                    <div className="bg-red-50 border-l-4 border-red-500 text-red-700 p-4 mb-6 rounded-r-lg animate-pulse">
-                        {error}
-                    </div>
-                )}
-                <form onSubmit={handleSubmit} className="space-y-6">
-                    <div>
-                        <label className="block text-blue-700 text-sm font-semibold mb-2" htmlFor="item">
+        <div className="container mx-auto p-6 max-w-lg bg-gray-100 rounded-xl shadow-lg">
+            <h2 className="text-3xl font-bold mb-6 text-cyan-800">Add New Inventory Item</h2>
+            {error && (
+                <div className="bg-red-100 border-l-4 border-red-500 text-red-700 p-4 rounded-lg mb-6 animate-pulse">
+                    {error}
+                </div>
+            )}
+            <div className="bg-white p-8 rounded-lg shadow-md border border-cyan-200 transition-transform hover:scale-[1.02]">
+                <div>
+                    <div className="mb-5">
+                        <label className="block text-cyan-700 text-sm font-semibold mb-2" htmlFor="item">
                             Item Name
                         </label>
                         <input
@@ -175,13 +175,13 @@ const InventoryAddForm = ({ onAddSuccess }) => {
                             id="item"
                             value={formData.item}
                             onChange={handleChange}
-                            className="w-full px-4 py-3 bg-blue-50 border border-blue-200 rounded-lg text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent transition duration-200"
-                            required
+                            className="w-full py-3 px-4 border border-cyan-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 bg-gray-50 text-cyan-900 placeholder-gray-400 transition-all duration-300"
                             placeholder="Enter item name"
+                            required
                         />
                     </div>
-                    <div>
-                        <label className="block text-blue-700 text-sm font-semibold mb-2" htmlFor="Quantity">
+                    <div className="mb-5">
+                        <label className="block text-cyan-700 text-sm font-semibold mb-2" htmlFor="Quantity">
                             Quantity
                         </label>
                         <input
@@ -190,14 +190,14 @@ const InventoryAddForm = ({ onAddSuccess }) => {
                             id="Quantity"
                             value={formData.Quantity}
                             onChange={handleChange}
-                            className="w-full px-4 py-3 bg-blue-50 border border-blue-200 rounded-lg text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent transition duration-200"
+                            className="w-full py-3 px-4 border border-cyan-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 bg-gray-50 text-cyan-900 placeholder-gray-400 transition-all duration-300"
+                            placeholder="Enter quantity"
                             required
                             min="0"
-                            placeholder="Enter quantity"
                         />
                     </div>
-                    <div>
-                        <label className="block text-blue-700 text-sm font-semibold mb-2" htmlFor="Price">
+                    <div className="mb-5">
+                        <label className="block text-cyan-700 text-sm font-semibold mb-2" htmlFor="Price">
                             Price
                         </label>
                         <input
@@ -206,15 +206,15 @@ const InventoryAddForm = ({ onAddSuccess }) => {
                             id="Price"
                             value={formData.Price}
                             onChange={handleChange}
-                            className="w-full px-4 py-3 bg-blue-50 border border-blue-200 rounded-lg text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent transition duration-200"
+                            className="w-full py-3 px-4 border border-cyan-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 bg-gray-50 text-cyan-900 placeholder-gray-400 transition-all duration-300"
+                            placeholder="Enter price"
                             required
                             min="0"
                             step="0.01"
-                            placeholder="Enter price"
                         />
                     </div>
-                    <div>
-                        <label className="block text-blue-700 text-sm font-semibold mb-2" htmlFor="Category">
+                    <div className="mb-5">
+                        <label className="block text-cyan-700 text-sm font-semibold mb-2" htmlFor="Category">
                             Category
                         </label>
                         <input
@@ -223,24 +223,24 @@ const InventoryAddForm = ({ onAddSuccess }) => {
                             id="Category"
                             value={formData.Category}
                             onChange={handleChange}
-                            className="w-full px-4 py-3 bg-blue-50 border border-blue-200 rounded-lg text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent transition duration-200"
-                            required
+                            className="w-full py-3 px-4 border border-cyan-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 bg-gray-50 text-cyan-900 placeholder-gray-400 transition-all duration-300"
                             placeholder="Enter category"
+                            required
                         />
                     </div>
                     <div className="flex justify-end">
                         <button
-                            type="submit"
-                            className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition duration-200 transform hover:scale-105"
+                            type="button"
+                            onClick={handleSubmit}
+                            className="bg-cyan-600 hover:bg-cyan-700 text-white font-bold py-3 px-6 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 transition-all duration-300 transform hover:scale-105"
                         >
                             Add Item
                         </button>
                     </div>
-                </form>
+                </div>
             </div>
         </div>
     );
 };
 
 export default InventoryAddForm;
-
